@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.11.9 on win32)" generated="2025-12-04T15:46:05.255735" rpa="false" schemaversion="5">
+<suite id="s1" name="testPractics" source="D:\testPractics">
+<suite id="s1-s1" name="Leran" source="D:\testPractics\leran">
+<suite id="s1-s1-s1" name="Payments" source="D:\testPractics\leran\payments.robot">
+<test id="s1-s1-s1-t1" name="Open site and add goods" line="16">
+<kw name="Precondition: Open Browser CHROME" owner="leran" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-12-04T15:46:05.464515" level="INFO">Opening browser 'chrome' to base url 'https://www.leran.pro'.</msg>
+<arg>url=${SITE}</arg>
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-12-04T15:46:05.464515" elapsed="14.725781"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-12-04T15:46:20.190296" elapsed="0.032000"/>
+</kw>
+<doc>Открыть браузер</doc>
+<status status="PASS" start="2025-12-04T15:46:05.463515" elapsed="14.758781"/>
+</kw>
+<kw name="Go To Catalog" owner="leran">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CATALOG_LINK}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-04T15:46:20.224295" elapsed="0.019604"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-04T15:46:20.244907" level="INFO">Clicking element 'xpath=//a[@data-ajax-url="/catalogue/menuHtml/"]'.</msg>
+<arg>${CATALOG_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-04T15:46:20.244907" elapsed="0.081371"/>
+</kw>
+<doc>Перейти в каталог</doc>
+<status status="PASS" start="2025-12-04T15:46:20.223301" elapsed="0.102977"/>
+</kw>
+<kw name="Hover Over Kitchen Appliances" owner="leran">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${KITCHEN_APPLIANCES_LINK}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-04T15:46:20.327277" elapsed="0.018998"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2025-12-04T15:46:20.347278" level="INFO">Simulating Mouse Over on element 'xpath=//a[contains(normalize-space(.),'Кухонная техника')]'.</msg>
+<arg>${KITCHEN_APPLIANCES_LINK}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2025-12-04T15:46:20.346275" elapsed="0.266726"/>
+</kw>
+<doc>Навести курсор на "Кухонная техника"</doc>
+<status status="PASS" start="2025-12-04T15:46:20.327277" elapsed="0.285724"/>
+</kw>
+<kw name="Go To Refrigerators" owner="leran">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${REFRIGERATORS_LINK}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-04T15:46:20.614002" elapsed="0.014825"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-04T15:46:20.629828" level="INFO">Clicking element 'xpath=//a[contains(normalize-space(.),'Холодильники')]'.</msg>
+<arg>${REFRIGERATORS_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-04T15:46:20.628827" elapsed="6.790609"/>
+</kw>
+<doc>Перейти в категорию "Холодильники"</doc>
+<status status="PASS" start="2025-12-04T15:46:20.614002" elapsed="6.805434"/>
+</kw>
+<kw name="Add First Product To Cart" owner="leran">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FIRST_PRODUCT_BUY_BUTTON}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-04T15:46:27.420435" elapsed="0.012001"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-04T15:46:27.432436" level="INFO">Clicking element 'xpath=//button[@data-catalogue_id="114" and contains(@class, 'buy-button')]'.</msg>
+<arg>${FIRST_PRODUCT_BUY_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-04T15:46:27.432436" elapsed="0.048534"/>
+</kw>
+<doc>Добавить первый товар в корзину</doc>
+<status status="PASS" start="2025-12-04T15:46:27.419436" elapsed="0.061534"/>
+</kw>
+<kw name="Confirm Order" owner="leran">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CONFIRM_ORDER_BUTTON}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-04T15:46:27.483969" elapsed="3.137097"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-04T15:46:30.622057" level="INFO">Clicking element 'xpath=//button[contains(@class, "button_theme_basket-accessories-confirm")]'.</msg>
+<arg>${CONFIRM_ORDER_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-04T15:46:30.622057" elapsed="4.502187"/>
+</kw>
+<doc>Подтвердить выбор товара</doc>
+<status status="PASS" start="2025-12-04T15:46:27.482970" elapsed="7.641274"/>
+</kw>
+<kw name="Go To Cart" owner="leran">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CART_LINK}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-04T15:46:35.125248" elapsed="0.015379"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-04T15:46:35.140627" level="INFO">Clicking element 'xpath=//a[@data-key="YmFza2V0LWxpbms"]'.</msg>
+<arg>${CART_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-04T15:46:35.140627" elapsed="3.513341"/>
+</kw>
+<doc>Перейти в корзину</doc>
+<status status="PASS" start="2025-12-04T15:46:35.125248" elapsed="3.528720"/>
+</kw>
+<kw name="Check Cart Contains Product Image" owner="leran">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CART_ITEM_IMAGE}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-04T15:46:38.654965" elapsed="0.014000"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-12-04T15:46:38.678965" level="INFO">Element 'xpath=//img[contains(@class, 'image__adaptive') and contains(@alt, 'basket_image')]' is displayed.</msg>
+<arg>${CART_ITEM_IMAGE}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-04T15:46:38.668965" elapsed="0.011001"/>
+</kw>
+<doc>Проверить, что в корзине есть картинка товара</doc>
+<status status="PASS" start="2025-12-04T15:46:38.654965" elapsed="0.025001"/>
+</kw>
+<kw name="Check Payments">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${BTN_PAYMENTS}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-12-04T15:46:38.680965" elapsed="0.280150"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-12-04T15:46:39.962391" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-12-04T15:46:38.961115" elapsed="1.001276"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-12-04T15:46:39.974041" level="INFO">@{PAY_LIST} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="ef9189b8b96c915fde10012fa9e695b6", element="f.751F1249A3A686B7C3DCBCCB3347C5CA.d.D7222D30177A2510FC4CF2E7A1F52051.e.15139")&gt; | &lt;selenium.we...</msg>
+<var>@{PAY_LIST}</var>
+<arg>${PAYMENTS}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-12-04T15:46:39.962391" elapsed="0.011650"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2025-12-04T15:46:39.975014" level="INFO">Length is 6.</msg>
+<msg time="2025-12-04T15:46:39.975014" level="INFO">${COUNT} = 6</msg>
+<var>${COUNT}</var>
+<arg>${PAY_LIST}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2025-12-04T15:46:39.974041" elapsed="0.001973"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-12-04T15:46:39.976014" level="INFO">Найдено платежных методов: 6</msg>
+<arg>Найдено платежных методов: ${COUNT}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-12-04T15:46:39.976014" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2025-12-04T15:46:39.977044" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${COUNT}</arg>
+<arg>${COUNT_PAYMENTS}</arg>
+<arg>msg="колчество способов оплаты не равно 6"</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2025-12-04T15:46:39.977044" elapsed="0.000000"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-04T15:46:39.979015" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="ef9189b8b96c915fde10012fa9e695b6", element="f.751F1249A3A686B7C3DCBCCB3347C5CA.d.D7222D30177A2510FC4CF2E7A1F52051.e.15139")&gt;'.</msg>
+<arg>${PAY_ELEM}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-04T15:46:39.978014" elapsed="0.040000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-12-04T15:46:42.018111" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-12-04T15:46:40.018014" elapsed="2.000097"/>
+</kw>
+<var name="${PAY_ELEM}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ef9189b8b96c915fde10012fa9e695b6", element="f.751F1249A3A686B7C3DCBCCB3347C5CA.d.D7222D30177A2510FC4CF2E7A1F52051.e.15139")&gt;</var>
+<status status="PASS" start="2025-12-04T15:46:39.978014" elapsed="2.040097"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-04T15:46:42.019114" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="ef9189b8b96c915fde10012fa9e695b6", element="f.751F1249A3A686B7C3DCBCCB3347C5CA.d.D7222D30177A2510FC4CF2E7A1F52051.e.15148")&gt;'.</msg>
+<arg>${PAY_ELEM}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-04T15:46:42.019114" elapsed="0.039001"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-12-04T15:46:44.060010" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-12-04T15:46:42.058115" elapsed="2.001895"/>
+</kw>
+<var name="${PAY_ELEM}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ef9189b8b96c915fde10012fa9e695b6", element="f.751F1249A3A686B7C3DCBCCB3347C5CA.d.D7222D30177A2510FC4CF2E7A1F52051.e.15148")&gt;</var>
+<status status="PASS" start="2025-12-04T15:46:42.019114" elapsed="2.040896"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-04T15:46:44.061005" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="ef9189b8b96c915fde10012fa9e695b6", element="f.751F1249A3A686B7C3DCBCCB3347C5CA.d.D7222D30177A2510FC4CF2E7A1F52051.e.15158")&gt;'.</msg>
+<arg>${PAY_ELEM}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-04T15:46:44.061005" elapsed="0.048999"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-12-04T15:46:46.111070" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-12-04T15:46:44.111005" elapsed="2.000065"/>
+</kw>
+<var name="${PAY_ELEM}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ef9189b8b96c915fde10012fa9e695b6", element="f.751F1249A3A686B7C3DCBCCB3347C5CA.d.D7222D30177A2510FC4CF2E7A1F52051.e.15158")&gt;</var>
+<status status="PASS" start="2025-12-04T15:46:44.060010" elapsed="2.051060"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-04T15:46:46.112951" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="ef9189b8b96c915fde10012fa9e695b6", element="f.751F1249A3A686B7C3DCBCCB3347C5CA.d.D7222D30177A2510FC4CF2E7A1F52051.e.15170")&gt;'.</msg>
+<arg>${PAY_ELEM}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-04T15:46:46.111946" elapsed="0.050047"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-12-04T15:46:48.163161" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-12-04T15:46:46.161993" elapsed="2.001168"/>
+</kw>
+<var name="${PAY_ELEM}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ef9189b8b96c915fde10012fa9e695b6", element="f.751F1249A3A686B7C3DCBCCB3347C5CA.d.D7222D30177A2510FC4CF2E7A1F52051.e.15170")&gt;</var>
+<status status="PASS" start="2025-12-04T15:46:46.111070" elapsed="2.052091"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-04T15:46:48.164193" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="ef9189b8b96c915fde10012fa9e695b6", element="f.751F1249A3A686B7C3DCBCCB3347C5CA.d.D7222D30177A2510FC4CF2E7A1F52051.e.15188")&gt;'.</msg>
+<arg>${PAY_ELEM}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-04T15:46:48.164193" elapsed="0.046971"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-12-04T15:46:50.212418" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-12-04T15:46:48.211164" elapsed="2.001254"/>
+</kw>
+<var name="${PAY_ELEM}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ef9189b8b96c915fde10012fa9e695b6", element="f.751F1249A3A686B7C3DCBCCB3347C5CA.d.D7222D30177A2510FC4CF2E7A1F52051.e.15188")&gt;</var>
+<status status="PASS" start="2025-12-04T15:46:48.163161" elapsed="2.049257"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-04T15:46:50.213466" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="ef9189b8b96c915fde10012fa9e695b6", element="f.751F1249A3A686B7C3DCBCCB3347C5CA.d.D7222D30177A2510FC4CF2E7A1F52051.e.15205")&gt;'.</msg>
+<arg>${PAY_ELEM}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-04T15:46:50.213466" elapsed="0.045526"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-12-04T15:46:52.260338" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-12-04T15:46:50.258992" elapsed="2.001346"/>
+</kw>
+<var name="${PAY_ELEM}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ef9189b8b96c915fde10012fa9e695b6", element="f.751F1249A3A686B7C3DCBCCB3347C5CA.d.D7222D30177A2510FC4CF2E7A1F52051.e.15205")&gt;</var>
+<status status="PASS" start="2025-12-04T15:46:50.212418" elapsed="2.047920"/>
+</iter>
+<var>${PAY_ELEM}</var>
+<value>@{PAY_LIST}</value>
+<status status="PASS" start="2025-12-04T15:46:39.977044" elapsed="12.283294"/>
+</for>
+<doc>Прокручиваем к разделу платежей =&gt; Получаем все элементы платежей =&gt; Проходим по каждому элементу</doc>
+<status status="PASS" start="2025-12-04T15:46:38.679966" elapsed="13.580372"/>
+</kw>
+<kw name="Poscondition: Close Browser" owner="leran" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-12-04T15:46:52.262351" elapsed="2.140539"/>
+</kw>
+<doc>Закрыть браузер</doc>
+<status status="PASS" start="2025-12-04T15:46:52.261351" elapsed="2.141539"/>
+</kw>
+<doc>Открыть каталог =&gt; навестись на элемент "Кухонная техника" =&gt; открыть категорию "Холодильники" =&gt;
+добавить в корзину 1й товар в списке =&gt; подтвердить выбор нажатием кнопки "Оформить заказ" =&gt;
+открыть корзину и убедиться, что товар добавлен.</doc>
+<status status="PASS" start="2025-12-04T15:46:05.460515" elapsed="48.942375"/>
+</test>
+<doc>Набор тестов для проверки функциональности сайта Leran.</doc>
+<status status="PASS" start="2025-12-04T15:46:05.300895" elapsed="49.106144"/>
+</suite>
+<status status="PASS" start="2025-12-04T15:46:05.278736" elapsed="49.132306"/>
+</suite>
+<status status="PASS" start="2025-12-04T15:46:05.258735" elapsed="49.154308"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="testPractics" id="s1" pass="1" fail="0" skip="0">testPractics</stat>
+<stat name="Leran" id="s1-s1" pass="1" fail="0" skip="0">testPractics.Leran</stat>
+<stat name="Payments" id="s1-s1-s1" pass="1" fail="0" skip="0">testPractics.Leran.Payments</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
